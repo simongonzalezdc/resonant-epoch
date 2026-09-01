@@ -1,0 +1,23 @@
+addon.epoch — ResonantOS add-on
+Copyright 2026 Kyanite Labs
+
+This add-on wraps the estimation mathematics of Epoch and vendors its build
+artifacts under vendor/:
+
+  * vendor/epoch/ — byte-identical dist artifacts of
+    @kyanitelabs/epoch 0.5.0 (https://github.com/KyaniteLabs/Epoch),
+    licensed Apache-2.0. The full license text is in vendor/epoch/LICENSE.
+    Regenerate and re-pin with scripts/vendor-epoch.mjs; VENDOR-MANIFEST.json
+    holds a SHA-256 pin for every vendored file.
+
+  * vendor/node_modules/zod (MIT), vendor/node_modules/date-fns (MIT) —
+    the exact static ESM import closure needed by the vendored dist.
+
+  * vendor/node_modules/date-fns-tz (MIT) — vendored whole because its
+    CommonJS lazy requires are not statically analyzable.
+
+The service exposes only Epoch's read-only estimation tools. Epoch's
+feedback/self-improvement machinery (record_actual, batch_record_actuals,
+calibrate_estimates, calibration and feedback-state readers, telemetry) is
+excluded by construction: the wrapper calls the vendored tool handlers
+directly and never invokes upstream dispatch(), and nothing is persisted.
