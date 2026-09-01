@@ -147,7 +147,7 @@ must report **0 errors AND 0 warnings** via `run-validator-check.sh`.
   dev-only env overrides; LICENSE (Apache-2.0) + NOTICE present; tree
   scan shows no secrets, no build artifacts, no home paths.
 - **A9 Internal-API pin** — `TOOL_REGISTRY` is exactly the upstream
-  24-tool set; every allowlisted tool resolves to a handler; the wrapper
+  25-tool set; every allowlisted tool resolves to a handler; the wrapper
   never imports `dispatch`.
 - **A10 Concurrency** — status calls succeed while a heavy
   `monte_carlo_schedule` (100k iterations) is in flight; 20 concurrent
