@@ -1,0 +1,13 @@
+{
+  "name": "@kyanitelabs/epoch-vendored",
+  "version": "0.5.0",
+  "description": "Byte-identical vendored dist artifacts of @kyanitelabs/epoch (Apache-2.0). Regenerate with scripts/vendor-epoch.mjs; every file is hash-pinned by VENDOR-MANIFEST.json.",
+  "type": "module",
+  "license": "Apache-2.0",
+  "private": true,
+  "epoch": {
+    "upstream": "@kyanitelabs/epoch",
+    "upstreamVersion": "0.5.0",
+    "vendoredBy": "scripts/vendor-epoch.mjs"
+  }
+}
