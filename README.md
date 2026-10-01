@@ -25,7 +25,7 @@ which writes estimates to a feedback store. Nothing is ever persisted: no
   `time_math` · `parse_duration` · `get_current_time` · `convert_timezone` ·
   `token_cost_estimate` · `compare_models`
 
-  Ten further upstream tools (state writers/readers plus estimation tools
+  Thirteen further upstream tools (state writers/readers plus estimation tools
   that depend on recorded history) are parked, not rejected; they can join
   later behind the same pattern.
 
